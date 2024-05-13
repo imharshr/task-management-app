@@ -23,3 +23,6 @@ docker-compose.prod.yml
 
 # Ignore database files
 task-management-backend/db.sqlite3
+
+
+**/.idea/

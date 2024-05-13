@@ -12,14 +12,7 @@ task-management-backend/.env
 # Ignore Python virtual environment
 task-management-backend/venv/
 
-# Ignore Docker-related files
-task-management-backend/.dockerignore
-task-management-backend/Dockerfile
-
-# Ignore Docker compose files
-docker-compose.yml
-docker-compose.dev.yml
-docker-compose.prod.yml
+task-management-backend/logs/
 
 # Ignore database files
 task-management-backend/db.sqlite3

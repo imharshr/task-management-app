@@ -1,0 +1,37 @@
+version: '3'
+
+networks:
+  task_network:
+    driver: bridge
+
+services:
+  mysql:
+    image: mysql
+    container_name: task-management-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_MAX_ALLOWED_PACKET: 150M
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - task_network
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./logs:/app/logs
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+    env_file: .env
+    networks:
+      - task_network
+
+volumes:
+  mysql_data:

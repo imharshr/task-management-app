@@ -1,0 +1,25 @@
+# Ignore node_modules directory for frontend
+task-management-app/node_modules/
+
+# Ignore build artifacts for frontend
+task-management-app/build/
+task-management-app/dist/
+
+# Ignore .env files (contains sensitive information)
+task-management-app/.env
+task-management-backend/.env
+
+# Ignore Python virtual environment
+task-management-backend/venv/
+
+# Ignore Docker-related files
+task-management-backend/.dockerignore
+task-management-backend/Dockerfile
+
+# Ignore Docker compose files
+docker-compose.yml
+docker-compose.dev.yml
+docker-compose.prod.yml
+
+# Ignore database files
+task-management-backend/db.sqlite3

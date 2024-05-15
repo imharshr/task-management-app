@@ -118,9 +118,9 @@ const App = () => {
   return (
     <Box p={4}>
       <h1>Task Management Application</h1>
-      <Grid container display={"flex"} alignItems="center"  spacing={2}> {/* Use Grid container for layout */}
+      <Grid container display={"flex"} alignItems="center" spacing={2}> {/* Use Grid container for layout */}
           <Grid item xs={12} md={2}>
-            <Button variant="contained" color="primary" onClick={handleOpen} fullWidth>
+            <Button sx={{height: "3.4rem"}} variant="contained" color="primary" onClick={handleOpen} fullWidth>
               Add Task
             </Button>
           </Grid>

@@ -2,6 +2,10 @@
 
 This project is a task management application built with React for the frontend and a Python backend with Docker for containerization.
 
+## Systems Architecture
+
+![Architecture](architecture.png)
+
 ## Running the Frontend
 
 To run the frontend, navigate to the `task-management-app` directory and run the following command:
